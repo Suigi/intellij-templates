@@ -95,3 +95,17 @@ fruit.stream().collect(toMap(
   e -> <value>
 ));
 ```
+
+#### Ted Young's Postfix Templates
+
+In addition to these I also import [Ted's Postfix Templates](https://github.com/jitterted/custom-postfix-templates) for the `.nv` _New Variable_ template.
+
+```java
+Game.nv
+```
+
+Expands to:
+
+```java
+Game <end> = new Game();
+```
