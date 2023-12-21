@@ -1,0 +1,6 @@
+<template name="tni" value="throw new UnsupportedOperationException(&quot;$METHOD_NAME$ is not implemented.&quot;);" description="throw UnsupportedOperationException" toReformat="false" toShortenFQNames="true">
+  <variable name="METHOD_NAME" expression="methodName()" defaultValue="" alwaysStopAt="false" />
+  <context>
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>

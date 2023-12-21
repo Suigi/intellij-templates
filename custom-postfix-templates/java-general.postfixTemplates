@@ -1,0 +1,32 @@
+
+.toMap : convert to Map
+	ARRAY                    →  java.util.Arrays.stream($expr$).collect(java.util.stream.Collectors.toMap(\
+		e -> $key$, \
+		e -> $value$))
+	java.util.Collection     →  $expr$.stream().collect(java.util.stream.Collectors.toMap(\
+		e -> $key$,\
+		e -> $value$))
+	java.util.List           →  $expr$.stream().collect(java.util.stream.Collectors.toMap(\
+		e -> $key$,\
+		e -> $value$))
+	java.lang.Iterable       →  java.util.stream.StreamSupport.stream($expr$.spliterator(), false).collect(java.util.stream.Collectors.toMap(\
+		e -> $key$,\
+		e -> $value$))
+	java.util.stream.Stream  →  $expr$.collect(java.util.stream.Collectors.toMap(\
+		e -> $key$,\
+		e -> $value$))
+	java.util.Map            →  $expr$.entrySet().stream().collect(java.util.stream.Collectors.toMap(\
+		e -> $key$,\
+		e -> $value$))
+
+.ast : AssertJ assertThat
+	NON_VOID [org.assertj.core.api.Assertions]        → [USE_STATIC_IMPORTS]org.assertj.core.api.Assertions.assertThat($expr$)\
+		.$END$;
+
+.ase : AssertJ assertThat.isEqualTo
+	NON_VOID [org.assertj.core.api.Assertions]        → [USE_STATIC_IMPORTS]org.assertj.core.api.Assertions.assertThat($expr$)\
+		.isEqualTo($END$);
+
+.asc : AssertJ assertThat.containsExactly
+	java.util.Collection [org.assertj.core.api.Assertions] -> [USE_STATIC_IMPORTS]org.assertj.core.api.Assertions.assertThat($expr$)\
+		.containsExactly($END$);

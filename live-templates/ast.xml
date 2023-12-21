@@ -1,0 +1,7 @@
+<template name="ast" value="org.assertj.core.api.Assertions.assertThat($target$)&#10;       .$is$($END$) " description="assert that" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+  <variable name="target" expression="" defaultValue="" alwaysStopAt="true" />
+  <variable name="is" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>

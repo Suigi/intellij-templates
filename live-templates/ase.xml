@@ -1,0 +1,7 @@
+<template name="ase" value="org.assertj.core.api.Assertions.assertThat($target$)&#10;        .isEqualTo($END$);" description="assert equals" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+  <variable name="target" expression="selection()" defaultValue="" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_EXPRESSION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
