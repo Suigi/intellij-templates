@@ -1,0 +1,6 @@
+<template name="asc" value="org.assertj.core.api.Assertions.assertThat($target$)&#10;       .containsExactly($END$) " description="assert contains exactly" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+  <variable name="target" expression="" defaultValue="" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>

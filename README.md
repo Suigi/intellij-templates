@@ -26,6 +26,17 @@ assertThat(<expression>)
         .isEqualTo(<end>);
 ```
 
+#### [`asc`](./live-templates/asc.xml) AssertJ assertThat.containsExactly
+
+Expands to:
+
+```java
+assertThat(<expression>)
+        .containsExactly(<end>);
+```
+
+
+
 #### [`tni`](./live-templates/tni.xml) Throw Not Implemented
 
 Expands to:
