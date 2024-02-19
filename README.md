@@ -107,6 +107,18 @@ fruit.stream().collect(toMap(
 ));
 ```
 
+#### `.lof` Wrap Expression in List.of()
+
+```java
+"Carrot".lof
+```
+
+Expands to:
+
+```java
+List.of("Carrot")
+```
+
 #### Ted Young's Postfix Templates
 
 In addition to these I also import [Ted's Postfix Templates](https://github.com/jitterted/custom-postfix-templates) for the `.nv` _New Variable_ template.
