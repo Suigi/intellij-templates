@@ -19,6 +19,9 @@
 		e -> $key$,\
 		e -> $value$))
 
+.lof : Wrap in List.of()
+	NON_VOID -> List.of($expr$)
+
 .ast : AssertJ assertThat
 	NON_VOID [org.assertj.core.api.Assertions]        → [USE_STATIC_IMPORTS]org.assertj.core.api.Assertions.assertThat($expr$)\
 		.$END$;
