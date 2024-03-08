@@ -1,3 +1,5 @@
+.vv : Capture expression in variable
+	NON_VOID	-> var $name:suggestVariableName()$ = $expr$;
 
 .toMap : convert to Map
 	ARRAY                    →  java.util.Arrays.stream($expr$).collect(java.util.stream.Collectors.toMap(\
@@ -21,6 +23,17 @@
 
 .lof : Wrap in List.of()
 	NON_VOID -> java.util.List.of($expr$)
+
+.lcopy : Wraps a collection in List.copyOf()
+	java.util.Collection -> java.util.List.copyOf($expr$)
+
+.lmap : Maps a collection into a new list using .stream().map(...).toList()
+	java.util.Collection -> $expr$.stream()\
+		.map($END$)\
+		.toList();
+	java.util.stream.Stream -> $expr$\
+		.map($END$)\
+		.toList();
 
 .ast : AssertJ assertThat
 	NON_VOID [org.assertj.core.api.Assertions]        → [USE_STATIC_IMPORTS]org.assertj.core.api.Assertions.assertThat($expr$)\
